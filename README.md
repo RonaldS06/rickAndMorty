@@ -13,5 +13,5 @@ Este proyecto es una aplicación web que te permite buscar y visualizar informac
  - Visualización de información detallada de cada personaje, incluyendo nombre, especie, género, estado, ubicación, etc.
 
 
-![Logo](https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/ab553cdc-e15d-4597-b65f-bec9201fd2dd/59c53f41-c601-11ee-bc01-0277465740e5?host=wbd-images.prod-vod.h264.io&partner=beamcom&w=4320)
+![Logo]([https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/ab553cdc-e15d-4597-b65f-bec9201fd2dd/59c53f41-c601-11ee-bc01-0277465740e5?host=wbd-images.prod-vod.h264.io&partner=beamcom&w=4320](https://thesnootyushers.files.wordpress.com/2017/04/rick-and-morty-logo.png)https://thesnootyushers.files.wordpress.com/2017/04/rick-and-morty-logo.png)
 
