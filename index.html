@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick and Morty - ApiCard</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+
+  <body>
+    <section>
+      <img
+        src="assets/img/Rick_and_Morty_logo.png"
+        alt="Logo Rick & Morty"
+        class="rickmorty-logo"
+      />
+
+      <form class="search" id="form">
+        <button type="submit">
+          <span class="material-symbols-outlined icon-search"> search </span>
+        </button>
+        <input
+          type="text"
+          name="character"
+          placeholder="Buscar personaje"
+          autocomplete="off"
+          class="search_input"
+        />
+      </form>
+
+      <!-- Contenedor -->
+      <div class="rickmorty__container" id="caja"></div>
+
+      <!-- Load -->
+      <div class="rickmortys-container">
+        <img
+          src="./assets/img/loadrm.png"
+          alt="carga rickmorty"
+          class="rickmorty-load"
+        />
+        <img
+          src="./assets/img/loadrm.png"
+          alt="carga rickmorty"
+          class="rickmorty-load"
+        />
+        <img
+          src="./assets/img/loadrm.png"
+          alt="carga rickmorty"
+          class="rickmorty-load"
+        />
+      </div>
+    </section>
+    <script src="./assets/request.js"></script>
+    <script src="./assets/index.js"></script>
+  </body>
+</html>

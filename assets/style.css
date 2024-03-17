@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1a2d43,
+    #0a101a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1a2d43,
+    #0a101a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 50px;
+}
+
+.rickmorty-logo {
+  width: 20%;
+}
+
+@media (width < 992px) {
+  .rickmorty-logo {
+    width: 15rem;
+  }
+}
+
+.rickmorty__container {
+  display: flex;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.rickmorty {
+  background: #333638;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  border-radius: 1rem;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.rickmorty:hover {
+  filter: drop-shadow(3px 5px 9px #455167);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  border-radius: 20px 20px 20px 20px;
+  width: fit-content;
+  transition: all 0.5s ease-in-out;
+}
+.search:hover {
+  box-shadow: 13px 5px 70px #2c4a6c;
+}
+.icon-search {
+  margin: 0;
+  margin-top: -1px;
+  background-color: rgb(71 71 71);
+  padding: 10.7px 10px;
+  border-radius: 20px 0 0 20px;
+  transition: color 0.3s ease-in-out;
+  color: rgb(147, 140, 140);
+}
+.search:hover .icon-search {
+  color: rgb(255, 255, 255);
+}
+.search_input {
+  border-radius: 0px 20px 20px 0;
+  border: none;
+  background-color: rgb(71 71 71);
+  padding: 15px 10px;
+  color: white;
+  width: 300px;
+}
+.search_input::placeholder {
+  color: rgb(155, 155, 155);
+}
+.search_input:focus {
+  outline: none;
+}
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.rickmorty h2 {
+  font-size: 1.3rem;
+  margin-top: 0.4rem;
+  color: #dccbcb;
+  width: 100%;
+  text-align: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rickmorty .specie {
+  font-size: 1rem;
+  margin: 0 0 5px 0;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+}
+
+.id-rickmorty {
+  /*     position: absolute;
+    top: 4rem;
+    font-size: 5.5rem;
+    color: #363636;
+    font-weight: 800;
+    z-index: 1; */
+  display: none;
+}
+
+.rickmorty img {
+  z-index: 2;
+  width: 150px;
+  border-radius: 10px;
+}
+
+.rickmorty__type {
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+.tipo-rickmorty {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.location {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #949494;
+  letter-spacing: 2px;
+
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* tipos */
+.spanText {
+  color: white;
+  font-weight: semi-bold;
+  cursor: pointer;
+  padding: 0px 8px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.spanText:hover {
+  color: rgb(224, 211, 211);
+}
+
+.Alive {
+  background-color: #7c5;
+}
+
+.Dead {
+  background-color: rgb(255, 94, 65);
+}
+
+.unknown {
+  background-color: rgb(164, 164, 164);
+}
+
+.Female {
+  background-color: rgb(191, 134, 255);
+}
+.Male {
+  background-color: rgb(111, 136, 244);
+}
+
+.rickmortys-container {
+  display: flex;
+  gap: 20px;
+  visibility: hidden;
+}
+.rickmorty-load {
+  height: 48px;
+  -webkit-animation: vibrate-1 0.3s linear infinite both,
+    colorizer 0.3s linear both;
+  animation: vibrate-1 0.3s linear infinite both;
+}
+
+.show {
+  visibility: visible;
+}
+
+/*https://animista.net/play/attention/vibrate*/
+
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
