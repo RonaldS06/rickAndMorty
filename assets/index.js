@@ -101,7 +101,6 @@ const getCharacterByName = async (e) => {
     const value = e.target.value
     const data = await fetchRickMorty(urlName + value)
 
-    console.log(value);
     containerGral.innerHTML = "";
     renderRickMortyList(data.results);
 }
