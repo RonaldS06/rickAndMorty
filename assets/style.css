@@ -79,7 +79,7 @@ section {
 }
 .icon-search {
   margin: 0;
-  margin-top: -1px;
+  margin-top: 0px;
   background-color: rgb(71 71 71);
   padding: 10.7px 10px;
   border-radius: 20px 0 0 20px;
